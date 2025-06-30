@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antici | Productos </title>
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
     </style>
@@ -15,6 +17,10 @@
     <header>
 
         <h1 class="logo">ANTICI</h1>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuHamburguesa" aria-controls="menuHamburguesa" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
 
         <nav class="nav-menu">
             <ul>
@@ -33,7 +39,40 @@
         <div class="catalog">
 
             <aside class="catalog__filters">
-                <p>hola</p>
+
+                <h3>Filtros</h3>
+
+                <p>Categorias</p>
+                <ul>
+                    <li><input type="checkbox">Remeras</li>
+                    <li><input type="checkbox">Buzos</li>
+                    <li><input type="checkbox">Shorts</li>
+                    <li><input type="checkbox">Accesorios</li>
+                </ul>
+            
+                <p>Talle</p>
+                <ul>
+                    <li><input type="checkbox">S</li>
+                    <li><input type="checkbox">M</li>
+                    <li><input type="checkbox">L</li>
+                    <li><input type="checkbox">XL</li>
+                    <li><input type="checkbox">XXL</li>
+                </ul>
+
+                <p>Color</p>
+                <ul>
+                    <li><input type="checkbox">Negro<div class="color-filters__negro"></div></li>
+                    <li><input type="checkbox">Blanco<div class="color-filters__blanco"></div></li>
+                    <li><input type="checkbox">Verde<div class="color-filters__verde"></div></li>
+                    <li><input type="checkbox">Marron<div class="color-filters__marron"></div></li>
+                </ul>
+
+                <p>Precio</p>
+                <label for="Precio"></label>
+                <input type="range" id="precio" name="precio">
+
+                <input type="button" value="Aplicar" class="product-card_cta">
+
             </aside>
 
             <section class="catalog__products">
@@ -118,7 +157,7 @@
                 <div class="product-card">
                     <img src="../assets/buzo-1.png" alt="Buzo basico negro" class="product-card_img">
                     <h3 class="product-card_title">Buzo Nucleo</h3>
-                    <p class="product-card_description">Buzo negro esencial, corte limpio y uso diario.</p>
+                    <p class="product-card_description">Buzo negro  esencial, corte limpio y uso diario.</p>
                     <p class="product-card_price">$40000</p>
                     <button class="product-card_cta">Comprar</button>
                 </div>
