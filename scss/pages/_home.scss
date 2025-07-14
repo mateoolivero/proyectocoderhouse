@@ -167,17 +167,17 @@
 
 /* MQ para celulares*/
 @media (max-width: 576px) {
-
-
   header {
     display: grid !important;
     grid-template-columns: 1fr 0.3fr;
+
     nav ul {
-    display: none !important;
+      display: none !important;
     }
+
     .navbar-toggler {
-    display: block !important;
-  }
+      display: block !important;
+    }
   }
 
   .grid1,
@@ -190,8 +190,9 @@
   .catalog__filters {
     display: none !important;
   }
-  
-  .container-grid{
+
+  .container-grid {
+    display: grid !important;
     grid-template-columns: 1fr !important;
     grid-template-areas: "grid2";
   }
@@ -215,25 +216,43 @@
     height: 50vh;
     width: 100%;
     margin: 10px;
-  }
 }
+
 
 /* MQ para tablets*/
 @media (min-width: 577px) and (max-width: 991px) {
   .grid1 {
     display: none !important;
   }
+
+  .container-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-areas: "grid2";
+  }
+
   .grid2 {
+    display: grid !important;
+    grid-area: grid2;
+    width: 100%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
       "item2 item4"
       "item5 item5";
-    
+
     .item2,
     .item4,
     .item5 {
       height: 40vh;
+      width: 100%;
+      margin: 10px;
     }
+  }
+
+  .item1,
+  .item3,
+  .item6 {
+    display: none !important;
   }
 }
