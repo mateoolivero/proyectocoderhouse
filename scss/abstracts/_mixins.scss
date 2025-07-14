@@ -1,0 +1,26 @@
+@use "variables" as *;
+
+// mixin sin argumentos
+@mixin header-footer (){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $background-color;
+    padding: 10px 20px;
+    height: 65px;
+}
+
+// mixin con argumentos
+@mixin padding ($padding-left, $padding-right, $padding-top,$padding-bottom){
+    padding-left: $padding-left;
+    padding-right: $padding-right;
+    padding-top: $padding-top;
+    padding-bottom: $padding-bottom;
+
+}
+
+@mixin gridProducts() {
+    display: grid;
+    gap: 30px;
+    margin: 10px;
+}

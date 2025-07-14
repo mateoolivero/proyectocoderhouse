@@ -1,0 +1,62 @@
+// abstracts
+
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as *;
+
+
+// base
+
+@use "base/reset" as *;
+@use "base/tipografia" as *;
+
+// pages 
+
+@use "pages/home" as *;
+@use "pages/productos" as *;
+@use "pages/contacto" as *;
+@use "pages/hotsale" as *;
+@use "pages/blog" as *;
+
+
+/* links */
+a {
+    color: $text-color !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: $hover-color !important;
+}
+
+/* Header y Navbar */
+header {
+    @include header-footer();
+    nav {
+        ul{
+            display: flex;
+            list-style: none;
+            font-size: 16px;
+            gap: 10px;
+            text-decoration: none !important;
+        }
+    }
+    .navbar-toggler {
+        display: none;
+        border: none;
+    }
+    .navbar-toggler-icon {
+
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+    }
+}
+
+/* Footer */
+footer {
+    @include header-footer();
+    color: $text-color;
+    .social {
+        i{
+            padding-left: 50px;
+        }
+    }
+}

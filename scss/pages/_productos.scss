@@ -1,0 +1,93 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+/* Pagina de productos */
+
+
+a {
+    color: $text-color !important;
+    text-decoration: none !important;
+}
+.catalog {
+    background-color: $background-color;
+    display: grid !important;
+    grid-template-columns: 10vw auto;
+    grid-template-rows: max-content max-content;
+    .catalog__products {
+      display: grid;
+      gap: 30px;
+      margin: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      .product-card {
+            display: grid;
+            justify-items: center;
+            background-color: white;
+            border-radius: 10px;
+            width: 350px;
+            color: $secundary-text-color;
+            padding-bottom: 10px;
+            margin: 20px;
+            
+            p {
+              text-align: center;
+              padding: 10px;
+            }
+           .product-card_img {
+            @include padding(5px, 5px, 5px, 0px);
+            border-radius: $esquina;
+            width: 75%;
+           }
+           .product-card_cta {
+            background-color: $background-color;
+            color: $text-color;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: $esquina;
+            transition: all 0.3s ease;
+           }
+           .product-card_cta:hover {
+            background-color: $hover-color;
+            transform: scale(1.02);
+           }
+}
+    }
+    .catalog__filters {
+        background-color: $hover-color;
+        padding: 0px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        ul {
+            margin-bottom: 50px;
+            li {
+                display: flex;
+                align-items: center;
+                div {
+                    .color-filters__negro,
+                    .color-filters__blanco,
+                    .color-filters__verde,
+                    .color-filters__marron {
+                            height: 15px;
+                            width: 15px;
+                            margin-left: 5px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+.color-filters__negro {
+  background-color: black;
+}
+
+.color-filters__blanco {
+  background-color: white;
+}
+
+.color-filters__verde {
+  background-color: green;
+}
+
+.color-filters__marron {
+  background-color: brown;
+}
+
