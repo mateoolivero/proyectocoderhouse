@@ -39,15 +39,15 @@
     .product {
         @include gridProducts;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 10px;
         .product-card {
             display: grid;
             justify-items: center;
             background-color: white;
             border-radius: 10px;
-            width: 350px;
+            width: 300px;
             color: $secundary-text-color;
             padding-bottom: 10px;
+            margin: 10px;
             p {
               text-align: center;
               padding: 10px;
@@ -82,7 +82,7 @@
     justify-content: space-between;
     .suppliers-logo{
       border-radius: 50px;
-      width: 10px;
+      width: 100px;
     }
   }
 }
@@ -93,13 +93,13 @@
   gap: 10px;
   .grid1 {
     display: grid;
-    width: 50%;
+    width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 400px 400px;
     grid-template-areas:
       "img-uno img-uno img-uno"
       "img-dos img-tres img-tres";
-    gap: 100px;
+    gap: 10px;
     .img-uno, .img-dos, .img-tres {
     border-radius: 20px;
     width: 100%;
@@ -139,27 +139,27 @@
       background-repeat: no-repeat;
     }
     .item1 {
-      background-image: url(../../assets/imggrid6.jpg);
+      background-image: url(../assets/imggrid6.jpg);
       grid-area: item1;
     }
     .item2 {
-      background-image: url(../../assets/imggrid4.jpg);
+      background-image: url(../assets/imggrid4.jpg);
       grid-area: item2;
     }
     .item3 {
-      background-image: url(../../assets/imggrid7.jpg);
+      background-image: url(../assets/imggrid7.jpg);
       grid-area: item3;
     }
     .item4 {
-      background-image: url(../../assets/imggrid5.jpg);
+      background-image: url(../assets/imggrid5.jpg);
       grid-area: item4;
     }
     .item5 {
-      background-image: url(../../assets/imggrid9.jpg);
+      background-image: url(../assets/imggrid9.jpg);
       grid-area: item5;
     }
     .item6 {
-      background-image: url(../../assets/imggrid6.jpg);
+      background-image: url(../assets/imggrid6.jpg);
       grid-area: item6;
 
     }
@@ -218,7 +218,7 @@
     width: 100%;
     margin: 10px;
 }
-
+}
 
 /* MQ para tablets*/
 @media (min-width: 577px) and (max-width: 991px) {
@@ -235,26 +235,22 @@
   .grid2 {
     display: grid !important;
     grid-area: grid2;
-    width: 100%;
+    width: 50%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
       "item2 item4"
       "item5 item5";
 
+    .item1,
     .item2,
+    .item3,
     .item4,
-    .item5 {
-      height: 40vh;
+    .item5,
+    .item6 {
+      height: 30vh;
       width: 100%;
-      margin: 10px;
     }
   }
+}
 
-  .item1,
-  .item3,
-  .item6 {
-    display: none !important;
-  }
-}
-}
