@@ -39,6 +39,7 @@
     .product {
         @include gridProducts;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 10px;
         .product-card {
             display: grid;
             justify-items: center;
@@ -81,7 +82,7 @@
     justify-content: space-between;
     .suppliers-logo{
       border-radius: 50px;
-      width: 100px;
+      width: 10px;
     }
   }
 }
@@ -98,7 +99,7 @@
     grid-template-areas:
       "img-uno img-uno img-uno"
       "img-dos img-tres img-tres";
-    gap: 10px;
+    gap: 100px;
     .img-uno, .img-dos, .img-tres {
     border-radius: 20px;
     width: 100%;
