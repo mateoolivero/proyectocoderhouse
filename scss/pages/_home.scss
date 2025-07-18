@@ -107,7 +107,7 @@
 .container-grid {
   display: flex;
   gap: 10px;
-  padding-bottom: 50px;
+  padding: 5%;
   .grid1 {
     display: grid;
     width: 100%;
@@ -196,6 +196,10 @@
     .navbar-toggler {
       display: block !important;
     }
+  }
+
+  .product{
+    justify-items: center;
   }
 
   .grid1,
