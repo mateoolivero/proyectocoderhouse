@@ -38,6 +38,7 @@ header {
             font-size: 16px;
             gap: 10px;
             text-decoration: none !important;
+            align-items: center;
             .button-shop{
                 border: 0PX;
                 background-color: $background-color;
@@ -65,9 +66,10 @@ header {
 footer {
     @include header-footer();
     color: $text-color;
+    
     .social {
         i{
-            padding-left: 50px;
+            padding-left: 20px;
         }
     }
 }
