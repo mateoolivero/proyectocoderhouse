@@ -290,7 +290,7 @@ a {
 .catalog .catalog__products .product-card {
   display: grid;
   justify-items: center;
-  background-color: white;
+  background-color: aliceblue;
   border-radius: 10px;
   width: 300px;
   color: #000000;
