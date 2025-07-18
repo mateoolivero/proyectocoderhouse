@@ -12,6 +12,12 @@ body {
 }
 
 /* Home */
+.promotion-bar {
+  background-color: #BDE038;
+  text-align: center;
+  height: 25px;
+}
+
 .logo {
   font-size: 40px;
   color: aliceblue;
@@ -34,6 +40,15 @@ body {
 /* Banner principal */
 .banner {
   background-image: url(../assets/banner-3.jpg);
+  background-color: #000000;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 488px;
+}
+
+.banner2 {
+  background-image: url(../assets/banner-4.jpg);
   background-color: #000000;
   background-position: center;
   background-repeat: no-repeat;
@@ -98,6 +113,7 @@ body {
   padding-top: 10px;
   padding-bottom: 20px;
   overflow: auto;
+  padding-bottom: 50px;
 }
 .suppliers .suppliers-list {
   display: flex;
@@ -112,6 +128,7 @@ body {
 .container-grid {
   display: flex;
   gap: 10px;
+  padding-bottom: 50px;
 }
 .container-grid .grid1 {
   display: grid;
@@ -417,6 +434,16 @@ header nav ul {
   font-size: 16px;
   gap: 10px;
   text-decoration: none !important;
+}
+header nav ul .button-shop {
+  border: 0PX;
+  background-color: #000000;
+}
+header nav ul .button-shop .bi {
+  color: aliceblue;
+}
+header nav ul .button-shop :hover {
+  color: #BDE038;
 }
 header .navbar-toggler {
   display: none;

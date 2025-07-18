@@ -38,8 +38,19 @@ header {
             font-size: 16px;
             gap: 10px;
             text-decoration: none !important;
+            .button-shop{
+                border: 0PX;
+                background-color: $background-color;
+                .bi {
+                color: $text-color;
+                }
+            }
+            .button-shop :hover {
+                color: $hover-color;
+            }
+            }
         }
-    }
+
     .navbar-toggler {
         display: none;
         border: none;
