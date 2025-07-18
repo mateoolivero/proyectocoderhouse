@@ -13,8 +13,9 @@ body {
 
 /* Home */
 .promotion-bar {
+  display: flex;
   background-color: #BDE038;
-  text-align: center;
+  justify-content: center;
   height: 25px;
 }
 
@@ -199,6 +200,9 @@ body {
 
 /* MQ para celulares*/
 @media (max-width: 576px) {
+  .text-promotion_2 {
+    display: none;
+  }
   header {
     display: grid !important;
     grid-template-columns: 1fr 0.3fr;
