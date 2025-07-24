@@ -201,6 +201,11 @@
     .navbar-toggler {
       display: block !important;
     }
+
+    #menuHamburguesa {
+      z-index: 1050;
+      position: relative;
+    }
   }
   footer {
     display: grid !important;
@@ -255,6 +260,9 @@
 
 /* MQ para tablets*/
 @media (min-width: 577px) and (max-width: 991px) {
+  .product{
+    justify-items: center;
+  }
   .grid1 {
     display: none !important;
   }
