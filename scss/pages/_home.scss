@@ -204,7 +204,7 @@
 
     #menuHamburguesa {
       z-index: 1050;
-      position: relative;
+
     }
   }
   footer {
@@ -216,6 +216,9 @@
 
   .product{
     justify-items: center;
+  }
+  .catalog__products {
+  justify-items: center;
   }
 
   .grid1,
@@ -261,6 +264,9 @@
 /* MQ para tablets*/
 @media (min-width: 577px) and (max-width: 991px) {
   .product{
+    justify-items: center;
+  }
+  .catalog__products {
     justify-items: center;
   }
   .grid1 {

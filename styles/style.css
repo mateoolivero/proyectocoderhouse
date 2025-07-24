@@ -215,7 +215,6 @@ body {
   }
   header #menuHamburguesa {
     z-index: 1050;
-    position: relative;
   }
   footer {
     display: grid !important;
@@ -224,6 +223,9 @@ body {
     justify-items: center;
   }
   .product {
+    justify-items: center;
+  }
+  .catalog__products {
     justify-items: center;
   }
   .grid1,
@@ -262,6 +264,9 @@ body {
 /* MQ para tablets*/
 @media (min-width: 577px) and (max-width: 991px) {
   .product {
+    justify-items: center;
+  }
+  .catalog__products {
     justify-items: center;
   }
   .grid1 {
@@ -311,7 +316,7 @@ a {
 .catalog .catalog__products .product-card {
   display: grid;
   justify-items: center;
-  background-color: aliceblue;
+  background-color: white;
   border-radius: 10px;
   width: 300px;
   color: #000000;
