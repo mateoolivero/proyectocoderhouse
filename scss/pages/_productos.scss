@@ -51,27 +51,63 @@ a {
 }
     }
     .catalog__filters {
-        background-color: $hover-color;
-        padding: 0px;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        ul {
-            margin-bottom: 50px;
-            li {
-                display: flex;
-                align-items: center;
-                div {
-                    .color-filters__negro,
-                    .color-filters__blanco,
-                    .color-filters__verde,
-                    .color-filters__marron {
-                            height: 15px;
-                            width: 15px;
-                            margin-left: 5px;
-                    }
+      background-color: lighten($hover-color, 5%);
+      padding: 2rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-left: 10px;
 
-                }
-            }
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: $text-color;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: 0.5rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin-bottom: 12px;
+          padding: 0.4rem 0.6rem;
+          border-radius: 8px;
+          transition: background 0.2s;
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.04);
+            cursor: pointer;
+          }
+
+          label {
+            font-size: 0.95rem;
+            color: $text-color;
+            cursor: pointer;
+          }
+
+          .color-filter {
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+
+            &--negro { background-color: black; }
+            &--blanco { background-color: white; }
+            &--verde { background-color: #4CAF50; }
+            &--marron { background-color: #795548; }
+          }
         }
+      }
     }
 }
 
