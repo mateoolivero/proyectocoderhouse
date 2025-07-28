@@ -107,7 +107,6 @@
 
       p {
         text-align: center;
-        padding: 10px;
       }
 
       .product-card_img {
@@ -137,7 +136,9 @@
 .suppliers {
   @include padding(5%, 5%, 10px, 20px);
   overflow: auto;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $hover-color;
 
   .suppliers-list {
     display: flex;
@@ -148,6 +149,9 @@
       width: 100px;
     }
   }
+  .suppliers-logo:hover{
+      transform: scale(1.04);
+    }
 }
 
 .img-1 {
