@@ -22,24 +22,62 @@
   padding-bottom: 50px;
   padding-right: 10px;
   z-index: 1000;
+
+  &:hover {
+    width: 80px;
+  }
 }
 
-.pop-up:hover {
-  width: 80px;
+.slider-box {
+  width: 100vw;
+  margin: 0 auto;
+  overflow: hidden;
+
+  ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 300vw;
+    animation: slide 9s infinite alternate ease-in-out;
+  }
+
+  li {
+    width: 100vw;
+    list-style: none;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-width: 100%;
+    }
+  }
 }
 
-/* Banner principal */
-.banner {
-  background-image: url(../assets/banner-3.jpg);
-  background-color: $background-color;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 488px;
+@keyframes slide {
+  0% {
+    margin-left: 0;
+  }
+  33.33% {
+    margin-left: 0;
+  }
+  38% {
+    margin-left: -100vw;
+  }
+  66.66% {
+    margin-left: -100vw;
+  }
+  71% {
+    margin-left: -200vw;
+  }
+  100% {
+    margin-left: -200vw;
+  }
 }
 
 .banner2 {
-  background-image: url(../assets/banner-4.jpg);
+  background-image: url(../assets/banner-6.jpg);
   background-color: $background-color;
   background-position: center;
   background-repeat: no-repeat;
@@ -49,44 +87,50 @@
 
 /* Productos destacados */
 .features {
-    @include padding (5%, 5%, 10px, 20px);
-    background-color: $background-color;
-    color: $text-color;
-    .product {
-        @include gridProducts;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        .product-card {
-            display: grid;
-            justify-items: center;
-            background-color: white;
-            border-radius: 10px;
-            width: 300px;
-            color: $secundary-text-color;
-            padding-bottom: 10px;
-            margin: 10px;
-            p {
-              text-align: center;
-              padding: 10px;
-            }
-           .product-card_img {
-            @include padding(5px, 5px, 5px, 0px);
-            border-radius: $esquina;
-            width: 75%;
-           }
-           .product-card_cta {
-            background-color: $background-color;
-            color: $text-color;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: $esquina;
-            transition: all 0.3s ease;
-           }
-           .product-card_cta:hover {
-            background-color: $hover-color;
-            transform: scale(1.02);
-           }
+  @include padding(5%, 5%, 10px, 20px);
+  background-color: $background-color;
+  color: $text-color;
+
+  .product {
+    @include gridProducts;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    .product-card {
+      display: grid;
+      justify-items: center;
+      background-color: white;
+      border-radius: 10px;
+      width: 300px;
+      color: $secundary-text-color;
+      padding-bottom: 10px;
+      margin: 10px;
+
+      p {
+        text-align: center;
+        padding: 10px;
+      }
+
+      .product-card_img {
+        @include padding(5px, 5px, 5px, 0px);
+        border-radius: $esquina;
+        width: 75%;
+      }
+
+      .product-card_cta {
+        background-color: $background-color;
+        color: $text-color;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: $esquina;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: $hover-color;
+          transform: scale(1.02);
         }
+      }
     }
+  }
 }
 
 /* Proveedores */
@@ -94,14 +138,21 @@
   @include padding(5%, 5%, 10px, 20px);
   overflow: auto;
   padding-bottom: 50px;
+
   .suppliers-list {
     display: flex;
     justify-content: space-between;
-    .suppliers-logo{
+
+    .suppliers-logo {
       border-radius: 50px;
       width: 100px;
     }
   }
+}
+
+.img-1 {
+  width: auto;
+  height: 100%;
 }
 
 /* Grid section */
@@ -109,6 +160,7 @@
   display: flex;
   gap: 10px;
   margin: 5%;
+
   .grid1 {
     display: grid;
     width: 100%;
@@ -118,18 +170,24 @@
       "img-uno img-uno img-uno"
       "img-dos img-tres img-tres";
     gap: 10px;
-    .img-uno, .img-dos, .img-tres {
-    border-radius: 20px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+    .img-uno,
+    .img-dos,
+    .img-tres {
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
+
     .img-uno {
       grid-area: img-uno;
     }
+
     .img-dos {
       grid-area: img-dos;
     }
+
     .img-tres {
       grid-area: img-tres;
     }
@@ -145,6 +203,7 @@
       "item3 item3 item4"
       "item5 item6 item6";
     gap: 10px;
+
     .item1,
     .item2,
     .item3,
@@ -156,35 +215,40 @@
       background-size: cover;
       background-repeat: no-repeat;
     }
+
     .item1 {
-      background-image: url(../assets/imggrid6.jpg);
+      background-image: url(../assets/imggrid-12.jpg);
       grid-area: item1;
     }
+
     .item2 {
-      background-image: url(../assets/imggrid4.jpg);
+      background-image: url(../assets/imggrid-10.jpg);
       grid-area: item2;
     }
+
     .item3 {
-      background-image: url(../assets/imggrid7.jpg);
+      background-image: url(../assets/imggrid-16.jpg);
       grid-area: item3;
     }
+
     .item4 {
-      background-image: url(../assets/imggrid5.jpg);
+      background-image: url(../assets/imggrid-11.jpg);
       grid-area: item4;
     }
+
     .item5 {
-      background-image: url(../assets/imggrid9.jpg);
+      background-image: url(../assets/imggrid-13.jpg);
       grid-area: item5;
     }
-    .item6 {
-      background-image: url(../assets/imggrid6.jpg);
-      grid-area: item6;
 
+    .item6 {
+      background-image: url(../assets/imggrid-17.jpg);
+      grid-area: item6;
     }
   }
 }
 
-/* MQ para celulares*/
+/* MQ para celulares */
 @media (max-width: 576px) {
   .text-promotion_2 {
     display: none;
@@ -204,9 +268,9 @@
 
     #menuHamburguesa {
       z-index: 1050;
-
     }
   }
+
   footer {
     display: grid !important;
     grid-template-columns: 1fr !important;
@@ -214,11 +278,9 @@
     justify-items: center;
   }
 
-  .product{
-    justify-items: center;
-  }
+  .product,
   .catalog__products {
-  justify-items: center;
+    justify-items: center;
   }
 
   .grid1,
@@ -258,17 +320,16 @@
     height: 50vh;
     width: 100%;
     margin: 10px;
-}
+  }
 }
 
-/* MQ para tablets*/
+/* MQ para tablets */
 @media (min-width: 577px) and (max-width: 991px) {
-  .product{
-    justify-items: center;
-  }
+  .product,
   .catalog__products {
     justify-items: center;
   }
+
   .grid1 {
     display: none !important;
   }
