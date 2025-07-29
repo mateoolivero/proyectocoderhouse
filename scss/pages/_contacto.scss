@@ -2,13 +2,18 @@
 
 /* Pagina de contacto */
 
+.contacto {
+    text-align: center;
+    padding-top: 5%;
+}
+
 .formulario-contacto {
     width: 100%;
     max-width: 500px;
-     margin: auto;
+    margin: auto;
     padding: 24px;
-     margin-top: 10%;
-     margin-bottom: 100vh;
+    margin-top: 5%;
+    margin-bottom: 7%;
     background-color: $text-color;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
